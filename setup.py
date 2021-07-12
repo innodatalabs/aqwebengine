@@ -1,12 +1,12 @@
 import re
 from pathlib import Path
-from aqwebengine import __version__, __author__, __author_email__, __description__
+from aqwebengine import __version__
 
 from setuptools import setup, find_packages
 
 
 setup(
-    name="pytest-qasync",
+    name="aqwebengine",
     version=__version__,
     packages=find_packages(),
     url="https://github.com/innodatalabs/aqwebengine",
