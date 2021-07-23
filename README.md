@@ -39,12 +39,21 @@ assert result == 42
 Asynchronously evaluates the string argument as a JS expression.
 Returns result to the Python caller. JSError is raised if evaluation of JS expression throws an exception.
 
+### register_python_function
+Registeres a python (sync or async) function to be callable from JS (see qt.callPython JS API below).
+
+Python function should take a single JSON-serializable parameter.
+
+Arguments:
+* `function_name` - the name of the function, as seen by JS
+* `function` - python function. Can be sync or async, should take a single JSON-serializable argument.
+
 ## JS API
 
-### `callPython`
+### `qt.callPython`
 Calls python host.
 
-Parameters:
+Arguments:
 * `function_name` - the name of the registered python function
 * (optional) `args` - any JSON-serializable value
 
